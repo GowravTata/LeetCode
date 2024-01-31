@@ -10,11 +10,11 @@ Table: Views
 | view_date     | date    |
 +---------------+---------+
 There is no primary key (column with unique values) for this table, the table may have duplicate rows.
-Each row of this table indicates that some viewer viewed an article (written by some author) on some date. 
+Each row of this table indicates that some viewer viewed an article (written by some author) ON some date. 
 Note that equal author_id and viewer_id indicate the same person.
  
 
-Write a solution to find all the authors that viewed at least one of their own articles.
+Write a solutiON to find all the authors that viewed at least one of their own articles.
 
 Return the result table sorted by id in ascending order.
 
@@ -45,6 +45,6 @@ Output:
 | 7    |
 +------+
  */
-select distinct(author_id) as id from views
-where author_id=viewer_id
-order by author_id asc
+SELECT DISTINCT(author_id) AS id FROM views
+WHERE author_id=viewer_id
+ORDER BY author_id ASC
